@@ -4,13 +4,14 @@ import java.util.Random;
 
 public class Conto {
 	
+	//parametri d'istanza
 	private int numeroConto;
 	private String nomeProprietario;
 	private int saldo;
 	
 	Random r = new Random();
 		
-	
+	//costruttore
 	public Conto(String nomeProprietario) {
 		
 		this.numeroConto = r.nextInt(100000, 10000000);
@@ -18,14 +19,11 @@ public class Conto {
 		this.saldo = 0;
 	}
 	
+	//getter/setter vari
 	public int getNumeroConto() {
 		
 		return numeroConto;
 	}
-//	public void setNumeroConto(int numeroConto) {
-//		
-//		this.numeroConto = numeroConto;
-//	}
 	
 	public String getNomeProprietario() {
 		
@@ -38,12 +36,8 @@ public class Conto {
 	
 	public int getSaldo() {
 		
-		return saldo;
+			return saldo;
 	}
-//	public void setSaldo(int saldo) {
-//		
-//		this.saldo = saldo;
-//	}
 	
 	
 	//metodi aggiuntivi
@@ -58,17 +52,14 @@ public class Conto {
 		else
 			System.out.println("Non puoi prelevare questa somma");
 	}
-//	public int getSaldo() {
-//		
-//		return saldo;
-//	}
+
 	
 	
 	@Override
 	public String toString() {
 		
-		return "Numero conto: " + numeroConto +
+		return "\nNumero conto: " + numeroConto +
 				"\nNome proprietario: " + nomeProprietario +
-				"\nSaldo: " + saldo; 
+				"\nSaldo: " + saldo;
 	}
 }
