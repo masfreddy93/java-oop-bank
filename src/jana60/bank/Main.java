@@ -4,29 +4,26 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Conto c1 = new Conto("Gianni");
+		Conto c1 = new Conto(23452, "Gianni");
 //		c1.setNomeProprietario("Nicola");
+		boolean res;
 		c1.addMoney(25);
-		c1.getMoney(50);
+		System.out.println(c1);
+		res = c1.getMoney(50);
+		System.out.println("Risultato prelievo: " + res);
 		
-		Conto c2 = new Conto("Lucia");
-		c2.getMoney(1200);
+		Conto c2 = new Conto(27364, "Lucia");
 		c2.addMoney(200);
+		System.out.println(c2);
+		res = c2.getMoney(1200);
+		System.out.println("Risultato prelievo: " + res);
 		
-		Conto c3 = new Conto("Monica");
+		Conto c3 = new Conto(20284, "Monica");
 		c3.addMoney(200);
-		c3.getMoney(150);
+		System.out.println(c3);
+		res = c3.getMoney(150);
+		System.out.println("Risultato prelievo: " + res);
 		
-		
-		
-		String result1 = c1.toString();
-		System.out.println(result1);
-		
-		String result2 = c2.toString();
-		System.out.println(result2);
-		
-		String result3 = c3.toString();
-		System.out.println(result3);
 		
 	}
 }

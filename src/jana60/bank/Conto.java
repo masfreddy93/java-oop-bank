@@ -1,6 +1,5 @@
 package jana60.bank;
 
-import java.util.Random;
 
 public class Conto {
 	
@@ -9,12 +8,11 @@ public class Conto {
 	private String nomeProprietario;
 	private int saldo;
 	
-	Random r = new Random();
 		
 	//costruttore
-	public Conto(String nomeProprietario) {
+	public Conto(int numeroConto, String nomeProprietario) {
 		
-		this.numeroConto = r.nextInt(100000, 10000000);
+		this.numeroConto = numeroConto;
 		this.nomeProprietario = nomeProprietario;
 		this.saldo = 0;
 	}
@@ -45,12 +43,13 @@ public class Conto {
 		
 		saldo += money;
 	}
-	public void getMoney(int money) {
+	public boolean getMoney(int money) {
 		
-		if((saldo - money) >= 0)
-			saldo -= money;
-		else
-			System.out.println("Non puoi prelevare questa somma");
+		if(saldo < money)		
+			return false;
+		
+		saldo -= money;
+		return true;
 	}
 
 	
